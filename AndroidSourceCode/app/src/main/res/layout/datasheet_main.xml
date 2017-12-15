@@ -1,0 +1,295 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:id="@+id/dataSheetLayout"
+    android:background="@color/background_white"
+    tools:context="com.example.manojsre.test.DatasheetMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@color/background_secondary_title_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="   "
+            android:id="@+id/dataSheetTitle"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="80">
+            <TabHost
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="92"
+            android:id="@+id/tabHost"
+            android:gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tabStripEnabled="false"
+                    android:background="@color/background_secondary_title_2">
+
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/dataSheetName"
+                            android:id="@+id/scrollViewMain">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mainFormTable"
+                            android:stretchColumns="0"
+                            android:shrinkColumns="1">
+                            <TableRow
+                                android:id="@+id/dateRow"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/dateLabel"
+                                    android:text="Date"/>
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="date"
+                                    android:ems="10"
+                                    android:id="@+id/dateText"
+                                    android:tag="DatasheetDate"
+                                    android:onClick="showDatePickerDialog"
+                                    android:autoText="false" />
+
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/searchTimeRow"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/searchTimeLabel"
+                                    android:text="Search Time(minutes)"/>
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:ems="10"
+                                    android:id="@+id/searchTime"
+                                    android:tag="SearchTime"/>
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/commentRow"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/commentLabel"
+                                    android:text="Comments"/>
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:ems="10"
+                                    android:id="@+id/comments"
+                                    android:tag="Comments"/>
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:focusable="true"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:id="@+id/observationsImageButton"
+                                        android:src="@drawable/ic_photo_camera_grey600_36dp" />
+                                    <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left"
+                                            android:id="@+id/observationsImageListButton"
+                                            android:src="@drawable/ic_perm_media_grey600_36dp" />
+                                </LinearLayout>
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Location Information"
+                                    android:id="@+id/locationTable" />
+                            </TableRow>
+
+
+                        </TableLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/dataSheetName"
+                            android:id="@+id/scrollView">
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:stretchColumns="0"
+                                android:shrinkColumns="1"
+                                android:id="@+id/attibutesLayout">
+                            </TableLayout>
+                        </ScrollView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/dataSheetName"
+                            android:id="@+id/scrollViewSiteChar">
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:stretchColumns="0"
+                            android:shrinkColumns="1"
+                            android:id="@+id/siteCharLayout">
+                        </TableLayout>
+                        </ScrollView>
+                        </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:layout_marginBottom="5dp">
+        <com.dd.CircularProgressButton
+            android:id="@+id/submitButton"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            app:cpb_cornerRadius="48dp"
+            android:textColor="@color/button_text_color_1"
+            app:cpb_selectorIdle="@drawable/button_selector_1"
+            app:cpb_selectorComplete="@drawable/button_selector_1"
+            app:cpb_selectorError="@drawable/button_selector_1"
+            android:textSize="18sp"
+            app:cpb_textComplete="Save Observation"
+            app:cpb_textError="Save Observation"
+            app:cpb_textIdle="Save Observation"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_secondary_title_2"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:background="@mipmap/ic_home"/>
+
+            <Button
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/background_white"
+                android:background="@android:color/transparent"
+                android:text="About" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/background_white"
+                android:background="@android:color/transparent"
+                android:text="Logout" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

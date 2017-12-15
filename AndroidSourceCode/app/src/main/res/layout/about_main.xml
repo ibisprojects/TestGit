@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:id="@+id/dataSheetLayout"
+    android:background="@color/background_white"
+    tools:context="com.example.manojsre.test.DatasheetMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@color/background_secondary_title_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="   "
+            android:id="@+id/dataSheetTitle"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Who we are" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CitSci.org supports your research by providing tools and resources that allow you to customize your scientific procedure - all in one location on the internet.  As your partner in research, CitSci.org provides tools for the entire research process including: creating new projects, managing project members, building custom data sheets, analyzing collected data, and gathering participant feedback.  Citizen science empowers individuals to pursue their interests in the scientific world through developing and implementing projects using the scientific method. As a member of CitSci.org, you are encouraged to investigate your own scientific questions or jump on board as a volunteer for an existing project. CitSci.org stands out for its customization features that allow you to include your creativity into your research!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Our Roots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CitSci.org was developed through the Natural Resources Ecology Lab (NREL) at Colorado State University as an initiative to promote citizen involvement in scientific research. Initial funding came from the National Science Foundation (NSF) under grant OCI-0636213.  We are partnering with Citizen Science Central to connect our volunteer coordinators with resources to help guide them in starting citizen science programs. We also collaborate with the citizen science data management working group of the DataONE program to facilitate data sharing and stewardship." />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Our Roots" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CitSci.org was developed through the Natural Resources Ecology Lab (NREL) at Colorado State University as an initiative to promote citizen involvement in scientific research. Initial funding came from the National Science Foundation (NSF) under grant OCI-0636213.  We are partnering with Citizen Science Central to connect our volunteer coordinators with resources to help guide them in starting citizen science programs. We also collaborate with the citizen science data management working group of the DataONE program to facilitate data sharing and stewardship. Not only do we provide an arena for your research investigations, but other researchers look to CitSci.org for data and models. Researchers in academia investigate the workings of CitSci.org in order to better understand the process of citizen science and the quality of data that emerges. In addition to learning more about citizen science, other researchers use the results found from posted projects to complete meta-analyses. Meta-analysis integrates data from various related investigations conducted by various sources to then use these data to answer a single larger question. Although we began as an online support system for monitoring and tracking observations, we are moving to accommodate a wide range of citizen science projects including air and water quality, stream monitoring, and energy use. We would love to see you add your own project to our growing list! Together, we can do science that matters!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="We're Growing!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To date, our volunteer coordinators have started 268 active projects that have contributed a total of 52557 species observations and 107474 site characteristics. Collectively, these data are made available for analysis to answer local, regional and/or global questions." />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_secondary_title_2"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:background="@mipmap/ic_home"/>
+
+            <Button
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/background_white"
+                android:background="@android:color/transparent"
+                android:text="About" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/background_white"
+                android:background="@android:color/transparent"
+                android:text="Logout" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/observationsLayout"
+    android:background="@color/background_white"
+    tools:context="com.nrel.citsci.ObservationsActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:background="@color/background_secondary_title_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   "
+            android:id="@+id/projectsListTitle"
+            android:textSize="30dp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:background="@color/background_secondary_title_2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_activity_observations"
+            android:gravity="center_vertical"
+            android:layout_alignBaseline="@+id/reloadObservations"
+            android:layout_alignBottom="@+id/reloadObservations"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:id="@+id/reloadObservations"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/observationList"
+            android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center">
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/uploadButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:cpb_cornerRadius="48dp"
+            android:textColor="@color/button_text_color_1"
+            app:cpb_selectorIdle="@drawable/button_selector_1"
+            app:cpb_selectorComplete="@drawable/button_selector_1"
+            app:cpb_selectorError="@drawable/button_selector_1"
+            android:textSize="18sp"
+            app:cpb_textComplete="Upload"
+            app:cpb_textError="Error"
+            app:cpb_textIdle="Upload"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/deleteButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:cpb_cornerRadius="48dp"
+            android:textColor="@color/button_text_color_1"
+            app:cpb_selectorIdle="@drawable/button_selector_1"
+            app:cpb_selectorComplete="@drawable/button_selector_1"
+            app:cpb_selectorError="@drawable/button_selector_1"
+            android:textSize="18sp"
+            app:cpb_textComplete="Delete"
+            app:cpb_textError="Delete"
+            app:cpb_textIdle="Delete"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_secondary_title_2"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:background="@mipmap/ic_home"/>
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/background_white"
+                android:background="@android:color/transparent"
+                android:text="About" />
+
+            <Button
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/background_white"
+                android:background="@android:color/transparent"
+                android:text="Logout" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@color/background_main">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="   "
+            android:id="@+id/homeTitle"
+            android:textSize="30dp" />
+    </LinearLayout>
+2
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:background="@color/background_main">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/csulogov3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:background="@color/background_main">
+        <com.dd.CircularProgressButton
+            android:id="@+id/signin"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            app:cpb_cornerRadius="48dp"
+            android:textColor="@color/button_text_color_1"
+            app:cpb_selectorIdle="@drawable/button_selector_1"
+            app:cpb_selectorComplete="@drawable/button_selector_1"
+            app:cpb_selectorError="@drawable/button_selector_1"
+            android:textSize="18sp"
+            app:cpb_textComplete="Sign In"
+            app:cpb_textError="Sign In"
+            app:cpb_textIdle="Sign In"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:background="@color/background_main">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/projectImage"
+            android:background="@drawable/csu_logo"
+            android:contentDescription="csu_logo" />
+    </RelativeLayout>
+
+</LinearLayout>

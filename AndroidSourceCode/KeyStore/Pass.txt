@@ -1,0 +1,3 @@
+Keystore Password: heartome
+Key Alias: muneesh
+Key Pass: heartome
